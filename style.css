@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #fff0f6;
+  --primary-color: #f53699;
+  --yes-button-color: #40c057;
+  --no-button-color: #f03e3e;
+  --text-color: #333;
+  --font-family: 'Protest Riot', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: var(--font-family);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.cat-img {
+  width: 30rem;
+  height: 30rem;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.cat-img:hover {
+  transform: scale(1.05);
+}
+
+.title {
+  font-size: 3.6rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 1.5rem 2.5rem;
+  border: none;
+  border-radius: 0.4rem;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+  transition: 
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.btn:hover {
+  filter: brightness(1.1);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn--yes {
+  background-color: var(--yes-button-color);
+}
+
+.btn--no {
+  background-color: var(--no-button-color);
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .cat-img {
+    width: 25rem;
+    height: 25rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+  }
+}
